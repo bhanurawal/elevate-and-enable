@@ -13,6 +13,7 @@ import { Route as PrototypesRouteImport } from './routes/prototypes'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as LearningRouteImport } from './routes/learning'
 import { Route as ImpactRouteImport } from './routes/impact'
+import { Route as ConnectRouteImport } from './routes/connect'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -36,6 +37,11 @@ const ImpactRoute = ImpactRouteImport.update({
   path: '/impact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConnectRoute = ConnectRouteImport.update({
+  id: '/connect',
+  path: '/connect',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -50,6 +56,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/connect': typeof ConnectRoute
   '/impact': typeof ImpactRoute
   '/learning': typeof LearningRoute
   '/portfolio': typeof PortfolioRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/connect': typeof ConnectRoute
   '/impact': typeof ImpactRoute
   '/learning': typeof LearningRoute
   '/portfolio': typeof PortfolioRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/connect': typeof ConnectRoute
   '/impact': typeof ImpactRoute
   '/learning': typeof LearningRoute
   '/portfolio': typeof PortfolioRoute
@@ -77,16 +86,25 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/connect'
     | '/impact'
     | '/learning'
     | '/portfolio'
     | '/prototypes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/impact' | '/learning' | '/portfolio' | '/prototypes'
+  to:
+    | '/'
+    | '/about'
+    | '/connect'
+    | '/impact'
+    | '/learning'
+    | '/portfolio'
+    | '/prototypes'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/connect'
     | '/impact'
     | '/learning'
     | '/portfolio'
@@ -96,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ConnectRoute: typeof ConnectRoute
   ImpactRoute: typeof ImpactRoute
   LearningRoute: typeof LearningRoute
   PortfolioRoute: typeof PortfolioRoute
@@ -132,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/connect': {
+      id: '/connect'
+      path: '/connect'
+      fullPath: '/connect'
+      preLoaderRoute: typeof ConnectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -152,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ConnectRoute: ConnectRoute,
   ImpactRoute: ImpactRoute,
   LearningRoute: LearningRoute,
   PortfolioRoute: PortfolioRoute,
