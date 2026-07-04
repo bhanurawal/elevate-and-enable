@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PrototypesRouteImport } from './routes/prototypes'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const PrototypesRoute = PrototypesRouteImport.update({
+  id: '/prototypes',
+  path: '/prototypes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/impact': typeof ImpactRoute
   '/portfolio': typeof PortfolioRoute
+  '/prototypes': typeof PrototypesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/impact': typeof ImpactRoute
   '/portfolio': typeof PortfolioRoute
+  '/prototypes': typeof PrototypesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,14 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/impact': typeof ImpactRoute
   '/portfolio': typeof PortfolioRoute
+  '/prototypes': typeof PrototypesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/impact' | '/portfolio'
+  fullPaths: '/' | '/about' | '/impact' | '/portfolio' | '/prototypes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/impact' | '/portfolio'
-  id: '__root__' | '/' | '/about' | '/impact' | '/portfolio'
+  to: '/' | '/about' | '/impact' | '/portfolio' | '/prototypes'
+  id: '__root__' | '/' | '/about' | '/impact' | '/portfolio' | '/prototypes'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +76,18 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ImpactRoute: typeof ImpactRoute
   PortfolioRoute: typeof PortfolioRoute
+  PrototypesRoute: typeof PrototypesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/prototypes': {
+      id: '/prototypes'
+      path: '/prototypes'
+      fullPath: '/prototypes'
+      preLoaderRoute: typeof PrototypesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/portfolio': {
       id: '/portfolio'
       path: '/portfolio'
@@ -107,6 +124,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ImpactRoute: ImpactRoute,
   PortfolioRoute: PortfolioRoute,
+  PrototypesRoute: PrototypesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
