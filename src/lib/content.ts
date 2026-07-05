@@ -8,9 +8,9 @@ export const profile = {
 
 export const proofBar = [
   { value: "25+ yrs", label: "Transforming enterprise operations" },
-  { value: "$34M+", label: "Value influenced & savings delivered" },
-  { value: "40+", label: "Global team members led" },
-  { value: "1000+", label: "Learners & students impacted" },
+  { value: "$20B+", label: "Value influenced & savings delivered" },
+  { value: "100+", label: "Global team members led" },
+  { value: "100+", label: "Learners & students impacted" },
 ];
 
 export const strengths = [
@@ -23,7 +23,7 @@ export const strengths = [
 ];
 
 export const impactMetrics = [
-  { value: "$14M", label: "Annual savings from AI-powered operations & analytics" },
+  { value: "$34M", label: "Annual savings from AI-powered operations & analytics" },
   { value: "30%", label: "Reduction in safety incidents via machine-vision AI" },
   { value: "$20M+", label: "Value from portfolio-prioritized enterprise delivery" },
   { value: "20%", label: "Productivity uplift from M365 AI adoption" },
@@ -62,8 +62,8 @@ export const impactStories = [
 
 export const portfolio = [
   {
-    title: "AI-First Enterprise Modernization",
-    framework: "Azure OpenAI · Power Platform · AI delivery operating model",
+    title: "AI-Enabled Enterprise Modernization",
+    framework: "Azure OpenAI · SaaS Platform · AI delivery operating model",
     outcome: "$14M annual efficiency gains across business units.",
   },
   {
@@ -73,7 +73,7 @@ export const portfolio = [
   },
   {
     title: "Workflow Automation",
-    framework: "M365 AI Builder · n8n · Power Automate",
+    framework: "M365 AI Builder · Power Platform · Power Automate",
     outcome: "Automated document parsing and risk identification.",
   },
   {
@@ -96,7 +96,7 @@ export const portfolio = [
 export const prototypes = [
   { title: "RAG Applications", desc: "Retrieval-augmented apps grounding LLMs in enterprise knowledge." },
   { title: "Bedrock & Azure Agents", desc: "Autonomous agents orchestrating multi-step business workflows." },
-  { title: "Streamlit Demos", desc: "Rapid interactive prototypes to communicate ideas to leadership." },
+  { title: "Codex Demos", desc: "Rapid interactive prototypes to communicate ideas to leadership." },
   { title: "Workflow Automation", desc: "n8n & Power Platform flows removing manual, repetitive work." },
   { title: "UI/UX Experiments", desc: "Design-system explorations for clarity and speed." },
   { title: "Data Visualization Tools", desc: "Power BI & Tableau dashboards turning data into decisions." },
@@ -114,8 +114,8 @@ export const testimonials = [
   { quote: "Bhanu brings clarity to complex problems.", source: "Enterprise Leader" },
   { quote: "He transforms teams with enablement-first leadership.", source: "Business Stakeholder" },
   { quote: "His prototypes accelerate decision-making.", source: "Product Sponsor" },
-  { quote: "His sessions changed how I see AI.", source: "College Student" },
-  { quote: "He made complex concepts simple.", source: "Workshop Attendee" },
+  { quote: "His sessions changed how I see AI.", source: "NMIMS Student" },
+  { quote: "He made complex concepts simple.", source: "Delhi University Attendee" },
   { quote: "Bhanu's mentorship is structured, practical, and empowering.", source: "Mentee" },
 ];
 
@@ -127,7 +127,7 @@ export const connectOptions = [
 ];
 
 export const companies = [
-  { name: "Shell", role: "Digitalization Lead & Product Manager" },
+  { name: "Shell", role: "AI & Automation Lead , Product Manager" },
   { name: "IBM", role: "Architect / Consultant" },
   { name: "TCS", role: "Enterprise Consultant" },
   { name: "Oracle", role: "ERP Solutions Architect" },
@@ -138,9 +138,9 @@ export const careerJourney = [
   {
     period: "2024 — Present",
     company: "Shell",
-    title: "Digitalization Lead (Generative AI & ML)",
+    title: "AI & Automatrion Strategy Lead",
     summary:
-      "Directs enterprise-scale AI and machine-vision deployments — cutting incidents 30%+, saving $14M/year, and establishing an AI delivery operating model from intake to release with security & IAM by design.",
+      "Directs enterprise-scale AI and machine-vision deployments - cutting incidents 30%+, saving $14M/year, and establishing an AI delivery operating model from intake to release with security & IAM by design.",
   },
   {
     period: "2016 — 2023",
