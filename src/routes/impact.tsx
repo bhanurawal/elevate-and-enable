@@ -9,7 +9,7 @@ export const Route = createFileRoute("/impact")({
       {
         name: "description",
         content:
-          "Measurable outcomes from Bhanu Rawal's enterprise transformation work: $14M annual savings, 30% incident reduction, $20M+ portfolio value, and more.",
+          "Measurable outcomes from Bhanu Rawal's enterprise transformation work: $14M annual savings, 30% incident reduction, $50M+ portfolio value, and more.",
       },
       { property: "og:title", content: "Impact — Bhanu Rawal" },
       { property: "og:description", content: "Measurable value delivered across global organizations." },
