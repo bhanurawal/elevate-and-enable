@@ -1,11 +1,8 @@
 {
   "version": 1,
-  "asset_id": "f0e64f35-bcaf-4fc3-b967-fb42c033e6db",
-  "project_id": "ec5346e7-2264-4519-ba91-cf1f851c3c97",
-  "url": "/__l5e/assets-v1/f0e64f35-bcaf-4fc3-b967-fb42c033e6db/Bhanu-Rawal-Resume.pdf",
-  "r2_key": "a/v1/ec5346e7-2264-4519-ba91-cf1f851c3c97/f0e64f35-bcaf-4fc3-b967-fb42c033e6db/Bhanu-Rawal-Resume.pdf",
-  "original_filename": "Bhanu-Rawal-Resume.pdf",
+  "url": "https://bhanu-rawal-public-assets-404006607818-us-east-1.s3.us-east-1.amazonaws.com/resume/Bhanu_Rawal.pdf",
+  "original_filename": "Bhanu_Rawal.pdf",
   "size": 189193,
   "content_type": "application/pdf",
-  "created_at": "2026-07-05T09:57:06Z"
+  "sha256": "dde0268fdfc9999dcde96e04323bcb2a532a35ab69edb6a1cb4b96deb206a2c8"
 }
