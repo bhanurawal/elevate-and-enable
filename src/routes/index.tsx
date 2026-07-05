@@ -1,12 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Quote } from "lucide-react";
+import { ArrowRight, Sparkles, Quote, Download, Briefcase } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
-import heroBg from "@/assets/hero-bg.jpg";
+import bhanuPortrait from "@/assets/bhanu-portrait.png";
+import resume from "@/assets/resume.pdf.asset.json";
 import {
   proofBar,
   strengths,
   impactMetrics,
-  prototypes,
+  companies,
+  careerJourney,
+  industries,
   testimonials,
 } from "@/lib/content";
 
@@ -18,54 +21,73 @@ function Index() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <img
-          src={heroBg}
-          alt="Enterprise AI network visualization"
-          width={1920}
-          height={1280}
-          className="absolute inset-0 h-full w-full object-cover opacity-60"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/80 to-background" />
-        <div className="relative mx-auto max-w-6xl px-5 py-28 sm:py-36">
-          <div className="max-w-3xl animate-fade-up">
+      <section className="relative overflow-hidden bg-navy-deep">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--electric)_0%,_transparent_55%)] opacity-15" />
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
+          {/* Copy */}
+          <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-electric-soft">
               <Sparkles className="h-3.5 w-3.5" /> The Executive Who Builds the Future
             </span>
-            <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] sm:text-6xl">
-              Bhanu transforms enterprises by blending{" "}
-              <span className="text-gradient">strategy, technology, and human enablement.</span>
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">
+              Building Intelligent Enterprises.{" "}
+              <span className="text-gradient">Empowering People. Creating Value.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Driving digital transformation, AI adoption, and stakeholder value across global
-              organizations — from strategy and architecture to hands-on execution.
-            </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
-                to="/connect"
+                to="/portfolio"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-electric-soft to-electric px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:scale-[1.03]"
               >
-                Connect with Bhanu <ArrowRight className="h-4 w-4" />
+                Explore His Work <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link
-                to="/portfolio"
+              <a
+                href={resume.url}
+                download="Bhanu-Rawal-Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-7 py-3.5 text-sm font-semibold backdrop-blur transition-colors hover:border-electric"
               >
-                Explore His Work
-              </Link>
+                Download Resume <Download className="h-4 w-4" />
+              </a>
+            </div>
+
+            {/* Companies worked with */}
+            <div className="mt-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                Companies I've worked with
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2.5">
+                {companies.map((c) => (
+                  <span
+                    key={c.name}
+                    className="rounded-full border border-border/70 bg-card/40 px-4 py-2 text-sm font-semibold backdrop-blur"
+                    title={c.role}
+                  >
+                    {c.name}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Proof bar */}
-        <div className="relative border-t border-border/60 bg-navy-deep/80 backdrop-blur">
-          <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px px-5 py-2 lg:grid-cols-4">
-            {proofBar.map((p) => (
-              <div key={p.label} className="px-4 py-6 text-center">
-                <div className="font-display text-3xl font-bold text-gradient">{p.value}</div>
-                <div className="mt-1.5 text-sm text-muted-foreground">{p.label}</div>
-              </div>
-            ))}
+          {/* Portrait + KPIs */}
+          <div className="flex flex-col items-center">
+            <div className="relative">
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy-deep to-transparent" />
+              <img
+                src={bhanuPortrait}
+                alt="Portrait of Bhanu Rawal"
+                width={930}
+                height={1140}
+                className="relative w-full max-w-sm object-contain drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_78%,transparent)]"
+              />
+            </div>
+            <div className="mt-4 grid w-full max-w-md grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border/60 bg-border/40 lg:grid-cols-4">
+              {proofBar.map((p) => (
+                <div key={p.label} className="bg-navy-deep px-3 py-5 text-center">
+                  <div className="font-display text-2xl font-bold text-gradient">{p.value}</div>
+                  <div className="mt-1 text-[11px] leading-tight text-muted-foreground">{p.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -132,61 +154,73 @@ function Index() {
         </div>
       </section>
 
-      {/* Prototypes preview */}
+      {/* Career journey */}
       <section className="mx-auto max-w-6xl px-5 py-24">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-electric-soft">
-              Always Upgrading, Always Building
-            </p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">A learner's mindset</h2>
-          </div>
-          <Link
-            to="/prototypes"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-electric-soft hover:gap-3 transition-all"
-          >
-            View prototype gallery <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {prototypes.slice(0, 6).map((p) => (
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-electric-soft">
+          25+ Years of Enterprise Leadership
+        </p>
+        <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Career journey</h2>
+        <div className="mt-12 space-y-5">
+          {careerJourney.map((job) => (
             <div
-              key={p.title}
-              className="glass-card group rounded-2xl p-6 transition-transform hover:-translate-y-1"
+              key={job.period + job.title}
+              className="glass-card grid gap-4 rounded-2xl p-6 sm:grid-cols-[200px_1fr] sm:gap-8"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-electric/15 text-electric-soft">
-                <Sparkles className="h-5 w-5" />
+              <div>
+                <div className="flex items-center gap-2 text-electric-soft">
+                  <Briefcase className="h-4 w-4" />
+                  <span className="text-sm font-semibold">{job.period}</span>
+                </div>
+                <div className="mt-2 font-display text-lg font-bold">{job.company}</div>
               </div>
-              <h3 className="mt-4 text-lg font-semibold">{p.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
+              <div>
+                <h3 className="text-lg font-semibold">{job.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{job.summary}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="border-t border-border/60 bg-navy-deep">
+      {/* Industries */}
+      <section className="border-y border-border/60 bg-navy-deep">
         <div className="mx-auto max-w-6xl px-5 py-24">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-electric-soft">
-            Testimonials & Social Proof
+            Domains Where Bhanu Has Delivered
           </p>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Trusted by leaders, students & mentees</h2>
+          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Industries</h2>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((t) => (
-              <figure key={t.quote} className="glass-card rounded-2xl p-6">
-                <Quote className="h-6 w-6 text-electric-soft" />
-                <blockquote className="mt-4 text-base leading-relaxed">"{t.quote}"</blockquote>
-                <figcaption className="mt-4 text-sm font-medium text-muted-foreground">
-                  — {t.source}
-                </figcaption>
-              </figure>
+            {industries.map((ind) => (
+              <div key={ind.name} className="glass-card rounded-2xl p-6">
+                <h3 className="text-lg font-semibold">{ind.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{ind.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Testimonials */}
       <section className="mx-auto max-w-6xl px-5 py-24">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-electric-soft">
+          Testimonials & Social Proof
+        </p>
+        <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Trusted by leaders, students & mentees</h2>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((t) => (
+            <figure key={t.quote} className="glass-card rounded-2xl p-6">
+              <Quote className="h-6 w-6 text-electric-soft" />
+              <blockquote className="mt-4 text-base leading-relaxed">"{t.quote}"</blockquote>
+              <figcaption className="mt-4 text-sm font-medium text-muted-foreground">
+                — {t.source}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-6xl px-5 pb-24">
         <div className="glass-card relative overflow-hidden rounded-3xl px-8 py-16 text-center sm:px-16">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--electric)_0%,_transparent_60%)] opacity-15" />
           <div className="relative">
