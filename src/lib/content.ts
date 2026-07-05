@@ -25,7 +25,7 @@ export const strengths = [
 export const impactMetrics = [
   { value: "$34M", label: "Annual savings from AI-powered operations & analytics" },
   { value: "30%", label: "Reduction in safety incidents via machine-vision AI" },
-  { value: "$20M+", label: "Value from portfolio-prioritized enterprise delivery" },
+  { value: "$50M+", label: "Value from portfolio-prioritized enterprise delivery" },
   { value: "20%", label: "Productivity uplift from M365 AI adoption" },
 ];
 
@@ -55,7 +55,7 @@ export const impactStories = [
     title: "Portfolio-Prioritized Enterprise Delivery",
     problem: "Delivery wasn't sequenced by value, risk, and compliance criticality.",
     approach: "Implemented data-driven prioritization frameworks and KPI dashboards.",
-    outcome: "$20M+ savings, including the Sphera compliance platform ($3M).",
+    outcome: "$50M+ savings, including the Sphera compliance platform ($3M).",
     enabled: "Predictable, compliant delivery with continuous, measurable improvement.",
   },
 ];
@@ -79,7 +79,7 @@ export const portfolio = [
   {
     title: "Compliance & Governance Platforms",
     framework: "Sphera SaaS · Governance frameworks · IAM by design",
-    outcome: "$20M+ savings and reduced technical debt.",
+    outcome: "$50M+ savings and reduced technical debt.",
   },
   {
     title: "Scalable Architecture Design",
@@ -147,7 +147,7 @@ export const careerJourney = [
     company: "Shell",
     title: "Product Manager",
     summary:
-      "Owned product lifecycle and portfolio prioritization across global teams — including the Sphera compliance platform ($3M saving) and data-driven frameworks contributing to $20M+ in value.",
+      "Owned product lifecycle and portfolio prioritization across global teams — including the Sphera compliance platform ($3M saving) and data-driven frameworks contributing to $50M+ in value.",
   },
   {
     period: "1999 — 2016",
