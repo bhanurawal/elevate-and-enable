@@ -125,3 +125,44 @@ export const connectOptions = [
   { title: "Request mentorship", desc: "Structured guidance for emerging talent." },
   { title: "Collaborate on a prototype", desc: "Rapidly validate an AI-first idea together." },
 ];
+
+export const companies = [
+  { name: "Shell", role: "Digitalization Lead & Product Manager" },
+  { name: "IBM", role: "Architect / Consultant" },
+  { name: "TCS", role: "Enterprise Consultant" },
+  { name: "Oracle", role: "ERP Solutions Architect" },
+  { name: "RMSI", role: "GIS & Geospatial Solutions" },
+];
+
+export const careerJourney = [
+  {
+    period: "2024 — Present",
+    company: "Shell",
+    title: "Digitalization Lead (Generative AI & ML)",
+    summary:
+      "Directs enterprise-scale AI and machine-vision deployments — cutting incidents 30%+, saving $14M/year, and establishing an AI delivery operating model from intake to release with security & IAM by design.",
+  },
+  {
+    period: "2016 — 2023",
+    company: "Shell",
+    title: "Product Manager",
+    summary:
+      "Owned product lifecycle and portfolio prioritization across global teams — including the Sphera compliance platform ($3M saving) and data-driven frameworks contributing to $20M+ in value.",
+  },
+  {
+    period: "1999 — 2016",
+    company: "IBM · TCS · Oracle · RMSI",
+    title: "Architect / Consultant",
+    summary:
+      "Led ERP, GIS, and enterprise product delivery across global engagements — embedding compliance-by-design, building reusable accelerators, and driving 5–10% cost reductions and a mobile HR app that lifted workforce efficiency 30%.",
+  },
+];
+
+export const industries = [
+  { name: "GIS – Geographical Information System", desc: "Geospatial platforms and location intelligence." },
+  { name: "Retail", desc: "Customer experience and operations modernization." },
+  { name: "Banking", desc: "Secure, compliant digital financial services." },
+  { name: "Mining", desc: "Safety intelligence and operational efficiency." },
+  { name: "Oil & Gas", desc: "Upstream digitalization and AI adoption." },
+  { name: "Nano Technologies", desc: "Emerging-tech research and innovation." },
+];
