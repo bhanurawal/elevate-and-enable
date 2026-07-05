@@ -3,7 +3,7 @@ export const profile = {
   role: "Executive Leader | Enterprise Transformer | AI Innovator",
   location: "Bengaluru, India",
   email: "bhanurawal@outlook.com",
-  linkedin: "https://linkedin.com/in/bhanu-ai/",
+  linkedin: "https://www.linkedin.com/in/bhanu-leader-ai/",
 };
 
 export const proofBar = [

@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+
 import { Linkedin, Mail } from "lucide-react";
 import { profile } from "@/lib/content";
 
@@ -34,22 +34,23 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold">Explore</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-            <li><Link to="/about" className="hover:text-foreground">About</Link></li>
-            <li><Link to="/impact" className="hover:text-foreground">Impact</Link></li>
-            <li><Link to="/portfolio" className="hover:text-foreground">Portfolio</Link></li>
-            <li><Link to="/prototypes" className="hover:text-foreground">Prototypes</Link></li>
+            <li><a href="/#about" className="hover:text-foreground">About</a></li>
+            <li><a href="/#impact" className="hover:text-foreground">Impact</a></li>
+            <li><a href="/#portfolio" className="hover:text-foreground">Portfolio</a></li>
+            <li><a href="/#prototypes" className="hover:text-foreground">Prototypes</a></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-sm font-semibold">Connect</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-            <li><Link to="/learning" className="hover:text-foreground">Learning & Mentorship</Link></li>
-            <li><Link to="/connect" className="hover:text-foreground">Work with Bhanu</Link></li>
+            <li><a href="/#industries" className="hover:text-foreground">Industries</a></li>
+            <li><a href="/#learning" className="hover:text-foreground">Learning & Mentorship</a></li>
+            <li><a href="/#connect" className="hover:text-foreground">Work with Bhanu</a></li>
             <li><a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-foreground">LinkedIn</a></li>
-            <li><a href={`mailto:${profile.email}`} className="hover:text-foreground">Email</a></li>
           </ul>
         </div>
+
       </div>
       <div className="border-t border-border/60 py-5 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} Bhanu Rawal. All rights reserved.
