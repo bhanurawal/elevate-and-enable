@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Bhanu Rawal transforms enterprises by blending strategy, technology, and human enablement — driving digital transformation, AI adoption, and measurable stakeholder value.",
       },
       { name: "author", content: "Bhanu Rawal" },
-      { property: "og:title", content: "Bhanu Rawal — Executive Leader & AI Innovator" },
+      { property: "og:title", content: "Bhanu Rawal — Executive Leader, Enterprise Transformer & AI Innovator" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Bhanu Rawal — Executive Leader, Enterprise Transformer & AI Innovator" },
+      { name: "description", content: "Bhanu Rawal transforms enterprises by blending strategy, technology, and human enablement — driving digital transformation, AI adoption, and measurable stakeholder value." },
+      { property: "og:description", content: "Bhanu Rawal transforms enterprises by blending strategy, technology, and human enablement — driving digital transformation, AI adoption, and measurable stakeholder value." },
+      { name: "twitter:description", content: "Bhanu Rawal transforms enterprises by blending strategy, technology, and human enablement — driving digital transformation, AI adoption, and measurable stakeholder value." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/03c49e6e-d5a1-4f7f-bfc5-a752699dddd3/id-preview-a822df7e--ec5346e7-2264-4519-ba91-cf1f851c3c97.lovable.app-1783249970177.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/03c49e6e-d5a1-4f7f-bfc5-a752699dddd3/id-preview-a822df7e--ec5346e7-2264-4519-ba91-cf1f851c3c97.lovable.app-1783249970177.png" },
     ],
     links: [
       {
