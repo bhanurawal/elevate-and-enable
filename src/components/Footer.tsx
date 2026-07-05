@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+
 import { Linkedin, Mail } from "lucide-react";
 import { profile } from "@/lib/content";
 
