@@ -1,15 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin } from "lucide-react";
+import { profile } from "@/lib/content";
 
 const nav = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/impact", label: "Impact" },
-  { to: "/portfolio", label: "Portfolio" },
-  { to: "/prototypes", label: "Prototypes" },
-  { to: "/learning", label: "Learning & Mentorship" },
-  { to: "/connect", label: "Connect" },
+  { href: "/#about", label: "About" },
+  { href: "/#impact", label: "Impact" },
+  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#prototypes", label: "Prototypes" },
+  { href: "/#industries", label: "Industries" },
+  { href: "/#learning", label: "Learning & Mentorship" },
+  { href: "/#connect", label: "Connect" },
 ] as const;
 
 export function Header() {
@@ -26,45 +27,53 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
-          {nav.slice(1, -1).map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
+          {nav.map((n) => (
+            <a
+              key={n.href}
+              href={n.href}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
             >
               {n.label}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="/connect"
-            className="rounded-full bg-gradient-to-r from-electric-soft to-electric px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[0_8px_24px_-12px_var(--electric)] transition-transform hover:scale-[1.03]"
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Bhanu Rawal on LinkedIn"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border/70 text-muted-foreground transition-colors hover:border-electric hover:text-electric-soft"
           >
-            Connect with Bhanu
-          </Link>
+            <Linkedin className="h-4 w-4" />
+          </a>
         </nav>
 
-        <button
-          className="lg:hidden"
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-3 lg:hidden">
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Bhanu Rawal on LinkedIn"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border/70 text-muted-foreground"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
+          <button onClick={() => setOpen((o) => !o)} aria-label="Toggle menu">
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {open && (
         <nav className="border-t border-border/60 bg-background/95 px-5 py-4 lg:hidden">
           {nav.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
+            <a
+              key={n.href}
+              href={n.href}
               onClick={() => setOpen(false)}
               className="block py-2.5 text-sm font-medium text-muted-foreground"
-              activeProps={{ className: "text-foreground" }}
             >
               {n.label}
-            </Link>
+            </a>
           ))}
         </nav>
       )}
