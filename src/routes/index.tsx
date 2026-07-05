@@ -146,7 +146,7 @@ function Index() {
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 Bhanu is a global technology and digital transformation leader who helps enterprises
                 modernize operations, embed AI-first innovation, and unlock measurable business value.
-                He operates across strategy, architecture, and execution — enabling teams, uplifting
+                He operates across strategy, architecture, and execution- enabling teams, uplifting
                 capabilities, and delivering outcomes that matter.
               </p>
             </div>
