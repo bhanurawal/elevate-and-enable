@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrototypesRouteImport } from './routes/prototypes'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as LearningRouteImport } from './routes/learning'
+import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as ConnectRouteImport } from './routes/connect'
 import { Route as AboutRouteImport } from './routes/about'
@@ -36,6 +37,11 @@ const PortfolioRoute = PortfolioRouteImport.update({
 const LearningRoute = LearningRouteImport.update({
   id: '/learning',
   path: '/learning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ImpactRoute = ImpactRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/connect': typeof ConnectRoute
   '/impact': typeof ImpactRoute
+  '/industries': typeof IndustriesRoute
   '/learning': typeof LearningRoute
   '/portfolio': typeof PortfolioRoute
   '/prototypes': typeof PrototypesRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/connect': typeof ConnectRoute
   '/impact': typeof ImpactRoute
+  '/industries': typeof IndustriesRoute
   '/learning': typeof LearningRoute
   '/portfolio': typeof PortfolioRoute
   '/prototypes': typeof PrototypesRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/connect': typeof ConnectRoute
   '/impact': typeof ImpactRoute
+  '/industries': typeof IndustriesRoute
   '/learning': typeof LearningRoute
   '/portfolio': typeof PortfolioRoute
   '/prototypes': typeof PrototypesRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/connect'
     | '/impact'
+    | '/industries'
     | '/learning'
     | '/portfolio'
     | '/prototypes'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/connect'
     | '/impact'
+    | '/industries'
     | '/learning'
     | '/portfolio'
     | '/prototypes'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/connect'
     | '/impact'
+    | '/industries'
     | '/learning'
     | '/portfolio'
     | '/prototypes'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ConnectRoute: typeof ConnectRoute
   ImpactRoute: typeof ImpactRoute
+  IndustriesRoute: typeof IndustriesRoute
   LearningRoute: typeof LearningRoute
   PortfolioRoute: typeof PortfolioRoute
   PrototypesRoute: typeof PrototypesRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/learning'
       fullPath: '/learning'
       preLoaderRoute: typeof LearningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/impact': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ConnectRoute: ConnectRoute,
   ImpactRoute: ImpactRoute,
+  IndustriesRoute: IndustriesRoute,
   LearningRoute: LearningRoute,
   PortfolioRoute: PortfolioRoute,
   PrototypesRoute: PrototypesRoute,

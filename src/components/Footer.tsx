@@ -36,17 +36,17 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
             <li><a href="/#about" className="hover:text-foreground">About</a></li>
             <li><a href="/#impact" className="hover:text-foreground">Impact</a></li>
-            <li><a href="/#portfolio" className="hover:text-foreground">Portfolio</a></li>
-            <li><a href="/#prototypes" className="hover:text-foreground">Prototypes</a></li>
+            <li><a href="/portfolio" className="hover:text-foreground">Portfolio</a></li>
+            <li><a href="/prototypes" className="hover:text-foreground">Prototypes</a></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-sm font-semibold">Connect</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-            <li><a href="/#industries" className="hover:text-foreground">Industries</a></li>
-            <li><a href="/#learning" className="hover:text-foreground">Learning & Mentorship</a></li>
-            <li><a href="/#connect" className="hover:text-foreground">Work with Bhanu</a></li>
+            <li><a href="/industries" className="hover:text-foreground">Industries</a></li>
+            <li><a href="/learning" className="hover:text-foreground">Learning & Mentorship</a></li>
+            <li><a href="/connect" className="hover:text-foreground">Work with Bhanu</a></li>
             <li><a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-foreground">LinkedIn</a></li>
           </ul>
         </div>

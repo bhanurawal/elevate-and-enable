@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Linkedin, GraduationCap, Users, ArrowUpRight } from "lucide-react";
+import { Linkedin, GraduationCap, Users, ArrowUpRight, Quote } from "lucide-react";
 import { SiteLayout, PageHeader } from "@/components/SiteLayout";
-import { profile } from "@/lib/content";
+import { profile, testimonials } from "@/lib/content";
 
 export const Route = createFileRoute("/learning")({
   head: () => ({
@@ -96,6 +96,24 @@ function Learning() {
           >
             Follow on LinkedIn <ArrowUpRight className="h-4 w-4" />
           </a>
+        </div>
+
+        <div className="mt-16">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-electric-soft">
+            Testimonials & Social Proof
+          </p>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Trusted by leaders, students & mentees</h2>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure key={t.quote} className="glass-card rounded-2xl p-6">
+                <Quote className="h-6 w-6 text-electric-soft" />
+                <blockquote className="mt-4 text-base leading-relaxed">"{t.quote}"</blockquote>
+                <figcaption className="mt-4 text-sm font-medium text-muted-foreground">
+                  — {t.source}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
     </SiteLayout>
