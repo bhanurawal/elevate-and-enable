@@ -110,9 +110,9 @@ function Index() {
               <SectionEyebrow>Why Leaders Work With Bhanu</SectionEyebrow>
               <h2 className="mt-3 text-3xl font-bold sm:text-4xl">About Bhanu</h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Bhanu is a global technology and digital transformation leader who helps enterprises
-                modernize operations, embed AI-first innovation, and unlock measurable business value.
-                He operates across strategy, architecture, and execution- enabling teams, uplifting
+                As a global technology and digital transformation leader, I help enterprises modernize
+                operations, embed AI-enabled innovation, and unlock measurable business value.
+                I operate across strategy, architecture, and execution- enabling teams, uplifting
                 capabilities, and delivering outcomes that matter.
               </p>
             </div>
