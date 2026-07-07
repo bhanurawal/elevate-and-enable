@@ -24,7 +24,7 @@ const pillars = [
     icon: Linkedin,
     title: "LinkedIn Thought Leadership",
     items: [
-      "AI literacy posts reaching thousands monthly",
+      "AI learnings posts",
       "Enterprise transformation insights",
       "Real-estate & operations modernization frameworks",
       "Productivity and design systems",
@@ -34,10 +34,10 @@ const pillars = [
     icon: GraduationCap,
     title: "College Sessions",
     items: [
-      "Workshops on AI and modern stacks",
+      "Workshops on AI and its applications",
       "Career guidance for students",
       "Hands-on demos and live builds",
-      "Sessions impacting 1000+ students",
+      "Sessions impacting 100+ students",
     ],
   },
   {
@@ -58,7 +58,7 @@ function Learning() {
       <PageHeader
         eyebrow="Sharing Knowledge Openly"
         title="Learning & mentorship that lifts everyone"
-        intro="Bhanu believes in teaching others to accelerate their growth — combining public thought leadership, college sessions, and structured mentorship."
+        intro="I believes in teaching others to accelerate their growth - combining public thought leadership, college sessions, and structured mentorship."
       />
 
       <section className="mx-auto max-w-6xl px-5 py-20">
