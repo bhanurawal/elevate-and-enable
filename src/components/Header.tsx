@@ -6,11 +6,11 @@ import { profile } from "@/lib/content";
 const nav = [
   { href: "/#about", label: "About" },
   { href: "/#impact", label: "Impact" },
-  { href: "/#portfolio", label: "Portfolio" },
-  { href: "/#prototypes", label: "Prototypes" },
-  { href: "/#industries", label: "Industries" },
-  { href: "/#learning", label: "Learning & Mentorship" },
-  { href: "/#connect", label: "Connect" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/prototypes", label: "Prototypes" },
+  { href: "/industries", label: "Industries" },
+  { href: "/learning", label: "Learning & Mentorship" },
+  { href: "/connect", label: "Connect" },
 ] as const;
 
 export function Header() {
