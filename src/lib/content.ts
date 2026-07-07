@@ -23,7 +23,7 @@ export const strengths = [
 ];
 
 export const impactMetrics = [
-  { value: "$34M", label: "in annual savings through AI-enabled delivery" },
+  { value: "$14M", label: "in annual savings through AI-enabled delivery" },
   { value: "30%", label: "fewer safety incidents via machine-vision AI" },
   { value: "$30M+", label: "value from portfolio-prioritized delivery" },
   { value: "20%", label: "productivity uplift from M365 AI adoption" },
