@@ -7,10 +7,10 @@ export const profile = {
 };
 
 export const proofBar = [
-  { value: "25+ yrs", label: "Transforming enterprise operations" },
-  { value: "$20B+", label: "Value influenced & savings delivered" },
-  { value: "100+", label: "Global team members led" },
-  { value: "100+", label: "Learners & students impacted" },
+  { value: "25+ yrs", label: "transforming enterprise operations" },
+  { value: "$20B+", label: "in value influenced & savings delivered" },
+  { value: "100+", label: "global team members led" },
+  { value: "100+", label: "learners & students impacted" },
 ];
 
 export const strengths = [
@@ -23,10 +23,10 @@ export const strengths = [
 ];
 
 export const impactMetrics = [
-  { value: "$34M", label: "Annual savings from AI-powered operations & analytics" },
-  { value: "30%", label: "Reduction in safety incidents via machine-vision AI" },
-  { value: "$50M+", label: "Value from portfolio-prioritized enterprise delivery" },
-  { value: "20%", label: "Productivity uplift from M365 AI adoption" },
+  { value: "$34M", label: "in annual savings through AI-enabled delivery" },
+  { value: "30%", label: "fewer safety incidents via machine-vision AI" },
+  { value: "$50M+", label: "value from portfolio-prioritized delivery" },
+  { value: "20%", label: "productivity uplift from M365 AI adoption" },
 ];
 
 export const impactStories = [
@@ -94,12 +94,21 @@ export const portfolio = [
 ];
 
 export const prototypes = [
-  { title: "RAG Applications", desc: "Retrieval-augmented apps grounding LLMs in enterprise knowledge." },
-  { title: "Bedrock & Azure Agents", desc: "Autonomous agents orchestrating multi-step business workflows." },
-  { title: "Codex Demos", desc: "Rapid interactive prototypes to communicate ideas to leadership." },
-  { title: "Workflow Automation", desc: "n8n & Power Platform flows removing manual, repetitive work." },
-  { title: "UI/UX Experiments", desc: "Design-system explorations for clarity and speed." },
-  { title: "Data Visualization Tools", desc: "Power BI & Tableau dashboards turning data into decisions." },
+  {
+    title: "Enterprise RAG Playground",
+    desc: "Play with a retrieval-augmented assistant grounded in enterprise knowledge.",
+    url: "#",
+  },
+  {
+    title: "AI Workflow Agent",
+    desc: "See an autonomous agent orchestrate a multi-step business workflow.",
+    url: "#",
+  },
+  {
+    title: "Insights Dashboard",
+    desc: "Explore an interactive analytics view that turns raw data into decisions.",
+    url: "#",
+  },
 ];
 
 export const learningPhilosophy = [
