@@ -7,8 +7,8 @@ export const profile = {
 };
 
 export const proofBar = [
-  { value: "25+ yrs", label: "transforming enterprise operations" },
-  { value: "$20B+", label: "in value influenced & savings delivered" },
+  { value: "25+ yrs", label: "of transforming enterprise operations" },
+  { value: "$34M+", label: "in value influenced & savings delivered" },
   { value: "100+", label: "global team members led" },
   { value: "100+", label: "learners & students impacted" },
 ];
@@ -25,7 +25,7 @@ export const strengths = [
 export const impactMetrics = [
   { value: "$34M", label: "in annual savings through AI-enabled delivery" },
   { value: "30%", label: "fewer safety incidents via machine-vision AI" },
-  { value: "$50M+", label: "value from portfolio-prioritized delivery" },
+  { value: "$30M+", label: "value from portfolio-prioritized delivery" },
   { value: "20%", label: "productivity uplift from M365 AI adoption" },
 ];
 
@@ -79,7 +79,7 @@ export const portfolio = [
   {
     title: "Compliance & Governance Platforms",
     framework: "Sphera SaaS · Governance frameworks · IAM by design",
-    outcome: "$50M+ savings and reduced technical debt.",
+    outcome: "$30M+ savings and reduced technical debt.",
   },
   {
     title: "Scalable Architecture Design",
@@ -100,8 +100,8 @@ export const prototypes = [
     url: "#",
   },
   {
-    title: "AI Workflow Agent",
-    desc: "See an autonomous agent orchestrate a multi-step business workflow.",
+    title: "GIS Enabled Property Search",
+    desc: "Search for property by drawing bounding bax around the area.",
     url: "#",
   },
   {
@@ -120,8 +120,8 @@ export const learningPhilosophy = [
 ];
 
 export const testimonials = [
-  { quote: "Bhanu brings clarity to complex problems.", source: "Enterprise Leader" },
-  { quote: "He transforms teams with enablement-first leadership.", source: "Business Stakeholder" },
+  { quote: "Bhanu is a very focussed and dedicated individual. He is capable of going into minute details of complicated issues and resolving them at the root cause.", source: "Enterprise Leader" },
+  { quote: "He does a wonderful job in managing the resources to meet our customer's needs promptly.", source: "Business Stakeholder" },
   { quote: "His prototypes accelerate decision-making.", source: "Product Sponsor" },
   { quote: "His sessions changed how I see AI.", source: "NMIMS Student" },
   { quote: "He made complex concepts simple.", source: "Delhi University Attendee" },
@@ -129,7 +129,7 @@ export const testimonials = [
 ];
 
 export const connectOptions = [
-  { title: "Book a conversation", desc: "Discuss your enterprise transformation goals." },
+  { title: "Connect with Bhanu", desc: "Discuss your enterprise transformation goals." },
   { title: "Invite for a session", desc: "Keynotes, workshops, and college sessions on AI." },
   { title: "Request mentorship", desc: "Structured guidance for emerging talent." },
   { title: "Collaborate on a prototype", desc: "Rapidly validate an AI-first idea together." },
