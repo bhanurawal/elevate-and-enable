@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Linkedin, GraduationCap, Users, ArrowUpRight } from "lucide-react";
+import { Linkedin, GraduationCap, Users, ArrowUpRight, Quote } from "lucide-react";
 import { SiteLayout, PageHeader } from "@/components/SiteLayout";
-import { profile } from "@/lib/content";
+import { profile, testimonials } from "@/lib/content";
 
 export const Route = createFileRoute("/learning")({
   head: () => ({
