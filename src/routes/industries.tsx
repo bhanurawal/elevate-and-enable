@@ -41,7 +41,7 @@ function Industries() {
   return (
     <SiteLayout>
       <PageHeader
-        eyebrow="Domains Where Bhanu Has Delivered"
+        eyebrow="Domains Where I Have Delivered"
         title="Industries"
         intro="Cross-industry depth — from geospatial platforms to safety-critical operations — applied to unlock measurable value wherever transformation is needed."
       />
