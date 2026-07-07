@@ -1,19 +1,19 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Sparkles, ArrowUpRight } from "lucide-react";
 import { SiteLayout, PageHeader } from "@/components/SiteLayout";
-import { prototypes, learningPhilosophy } from "@/lib/content";
+import { prototypes } from "@/lib/content";
 
 export const Route = createFileRoute("/prototypes")({
   head: () => ({
     meta: [
-      { title: "Prototypes — Bhanu Rawal | Learning by Building" },
+      { title: "Portal — Play With Bhanu Rawal's Work" },
       {
         name: "description",
         content:
-          "A gallery of prototypes Bhanu Rawal builds to consolidate learning — RAG apps, AI agents, Streamlit demos, workflow automation, and data visualization tools.",
+          "A portal to play with some of the work Bhanu Rawal has delivered — interactive demos of RAG assistants, AI workflow agents, and analytics dashboards.",
       },
-      { property: "og:title", content: "Prototype Gallery — Bhanu Rawal" },
-      { property: "og:description", content: "Learning by building: RAG apps, agents, automation, and more." },
+      { property: "og:title", content: "Portal — Play With Bhanu's Work" },
+      { property: "og:description", content: "Interactive demos of AI assistants, agents, and dashboards." },
     ],
   }),
   component: Prototypes,
@@ -23,49 +23,34 @@ function Prototypes() {
   return (
     <SiteLayout>
       <PageHeader
-        eyebrow="Always Upgrading, Always Building"
-        title="A learner's mindset, made visible"
-        intro="Bhanu learns by building — shipping prototypes to consolidate learning, stay ahead of technological shifts, and share knowledge openly."
+        eyebrow="Try It Yourself"
+        title="A portal to play with the work I've delivered"
+        intro="Jump into a few interactive demos that showcase how AI-first thinking turns into working products — explore, click around, and see the ideas in action."
       />
 
-      <section className="mx-auto max-w-6xl px-5 py-20">
-        <h2 className="text-2xl font-bold sm:text-3xl">Prototype gallery</h2>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {prototypes.map((p) => (
-            <div
+            <a
               key={p.title}
-              className="glass-card group rounded-2xl p-6 transition-transform hover:-translate-y-1"
+              href={p.url}
+              target="_blank"
+              rel="noreferrer"
+              className="glass-card group flex flex-col rounded-2xl p-6 transition-transform hover:-translate-y-1"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-electric/15 text-electric-soft">
-                <Sparkles className="h-5 w-5" />
+              <div className="flex items-start justify-between">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-electric/15 text-electric-soft">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+                <ArrowUpRight className="h-5 w-5 text-electric-soft transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
               <h3 className="mt-4 text-lg font-semibold">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
-            </div>
+              <span className="mt-4 text-xs font-semibold uppercase tracking-widest text-electric-soft">
+                Open demo
+              </span>
+            </a>
           ))}
-        </div>
-
-        <div className="mt-20 grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-          <div>
-            <h2 className="text-2xl font-bold sm:text-3xl">Learning philosophy</h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              What differentiates Bhanu is a relentless commitment to growth — for himself and for
-              everyone around him.
-            </p>
-            <Link
-              to="/learning"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric-soft hover:gap-3 transition-all"
-            >
-              Explore learning & mentorship <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <ul className="grid gap-3">
-            {learningPhilosophy.map((l) => (
-              <li key={l} className="glass-card rounded-xl px-5 py-4 text-sm font-medium">
-                {l}
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
     </SiteLayout>
