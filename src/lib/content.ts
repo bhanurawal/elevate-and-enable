@@ -97,17 +97,17 @@ export const prototypes = [
   {
     title: "Enterprise RAG Playground",
     desc: "Play with a retrieval-augmented assistant grounded in enterprise knowledge.",
-    url: "#",
+    url: "https://dfk2s5tfdnrcz.cloudfront.net",
   },
   {
     title: "GIS Enabled Property Search",
     desc: "Search for property by drawing bounding bax around the area.",
-    url: "#",
+    url: "https://pcmfp2c7eu.us-east-1.awsapprunner.com",
   },
   {
-    title: "Insights Dashboard",
+    title: "Insights Dashboard - WIP",
     desc: "Explore an interactive analytics view that turns raw data into decisions.",
-    url: "#",
+    url: "https://public.tableau.com/app/profile/bhanu.rawal1527/viz/HRDashboard-GroupC/HRDasboard",
   },
 ];
 
