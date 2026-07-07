@@ -6,11 +6,11 @@ import { prototypes } from "@/lib/content";
 export const Route = createFileRoute("/prototypes")({
   head: () => ({
     meta: [
-      { title: "Portal — Play With Bhanu Rawal's Work" },
+      { title: "Inside the Lab: Uncovering the Work" },
       {
         name: "description",
         content:
-          "A portal to play with some of the work Bhanu Rawal has delivered — interactive demos of RAG assistants, AI workflow agents, and analytics dashboards.",
+          "Art of possible — interactive demos of RAG assistants, GIS enabled property search, and analytics dashboards.",
       },
       { property: "og:title", content: "Portal — Play With Bhanu's Work" },
       { property: "og:description", content: "Interactive demos of AI assistants, agents, and dashboards." },
@@ -24,7 +24,7 @@ function Prototypes() {
     <SiteLayout>
       <PageHeader
         eyebrow="Try It Yourself"
-        title="A portal to play with the work I've delivered"
+        title="Inside the Lab: Uncovering the Art Of Possible"
         intro="Jump into a few interactive demos that showcase how AI-first thinking turns into working products — explore, click around, and see the ideas in action."
       />
 
