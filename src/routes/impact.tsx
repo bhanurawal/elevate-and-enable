@@ -47,7 +47,7 @@ function Impact() {
                   ["Problem", s.problem],
                   ["Approach", s.approach],
                   ["Outcome", s.outcome],
-                  ["What Bhanu enabled", s.enabled],
+                  ["Enabled", s.enabled],
                 ].map(([label, val]) => (
                   <div key={label}>
                     <dt className="text-xs font-semibold uppercase tracking-widest text-electric-soft">
